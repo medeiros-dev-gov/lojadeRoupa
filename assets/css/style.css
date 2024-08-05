@@ -1,0 +1,435 @@
+/* Importa a fonte 'Poppins' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Remove margens e preenchimentos padrão de todos os elementos e define o box-sizing como border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define variáveis CSS para as cores usadas no site */
+:root{
+    --cor-padrao: #ff523b;
+    --cor-padrao-hoover: #f3b2e5;
+    --cor-fonte: #fff;
+    --cor-fonte-paragrafo: #555;
+    --cor-btn: #563434;
+    --cor-btn-hoover: #15ff00;
+    --cor-btn-fonte: #000;
+    --cor-fonte-corpo: #555;
+    --cor-fonte-corpo-leve: #777;
+}
+
+/* Define a fonte padrão do corpo do documento */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estiliza o banner com um gradiente radial */
+.banner {
+    background: radial-gradient(var(--cor-padrao-hoover), var(--cor-padrao));
+}
+
+/* Adiciona margem superior para a classe .linha dentro do banner */
+.banner .linha {
+    margin-top: 60px;
+}
+
+/* Define as larguras máximas e o espaçamento interno do container */
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Estiliza a barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Define o texto do nav como alinhado à direita */
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+/* Remove o estilo de lista e exibe os itens do nav inline */
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* Adiciona margem à direita dos itens de lista no nav */
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estiliza os links do nav */
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+/* Define a cor do texto do parágrafo no banner */
+.banner p{
+    color: var(--cor-fonte);
+}
+
+/* Define a cor do texto do parágrafo */
+p{
+    color: var(--cor-fonte-paragrafo);
+}
+
+/* Estiliza a classe .linha com flexbox */
+.linha{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Define a largura base da coluna .col-2 */
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+/* Estiliza as imagens dentro da coluna .col-2 */
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+/* Define o tamanho da fonte e margens do título na coluna .col-2 */
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+/* Define a cor e o peso da fonte do parágrafo na coluna .col-2 */
+.col-2 p{
+    font-weight: 600;
+    color: var(--cor-btn-fonte);
+}
+
+/* Estiliza o botão */
+.btn{
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background: var(--cor-btn);
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.4s;
+}
+
+/* Altera o estilo do botão ao passar o mouse */
+.btn:hover{
+    background: var(--cor-btn-hoover);
+    color: var(--cor-btn-fonte);
+}
+
+/* Define a margem das categorias */
+.categorias{
+    margin: 70px 0;
+}
+
+/* Estiliza o container de categorias */
+.corpo-categorias{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25;
+    padding-right: 25px;
+}
+
+/* Define a largura base da coluna .col-3 */
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/* Estiliza as imagens dentro da coluna .col-3 */
+.col-3 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Estiliza o título */
+.title {
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 80px;
+    text-align: center;
+    color: var(--cor-fonte-corpo);
+}
+
+/* Adiciona uma linha abaixo do título */
+.title::after{
+    content: '';
+    background-color: var(--cor-padrao);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* Define a largura base da coluna .col-4 */
+.col-4 {
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;    
+    transition: transform 0.6s;
+}
+
+/* Aplica uma transformação à coluna .col-4 ao passar o mouse */
+.col-4:hover {
+    transform: scale(1.1);
+}
+
+/* Estiliza as imagens dentro da coluna .col-4 */
+.col-4 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Estiliza os títulos dentro da coluna .col-4 */
+.col-4 h4{
+    color: var(--cor-fonte-corpo);
+    font-weight: normal;
+}
+
+/* Estiliza os parágrafos dentro da coluna .col-4 */
+.col-4 p {
+    font-size: 14px;
+}
+
+/* Estiliza os ícones de classificação */
+.classificacao ion-icon{
+    color: var(--cor-padrao);
+}
+
+/* Estiliza a seção de ofertas */
+.ofertas{
+    background: radial-gradient(var(--cor-padrao-hoover), var(--cor-padrao));
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+/* Estiliza as imagens dentro da seção de ofertas */
+.col-2 .ofertas img{
+    padding: 50px;
+}
+
+/* Estiliza o texto pequeno */
+small{
+    color: var(--cor-btn-fonte);
+}
+
+/* -------- DEPOIMENTOS -------- */
+
+/* Estiliza a seção de depoimentos */
+.depoimentos {
+    padding-top: 100px;
+}
+
+/* Estiliza a coluna de depoimentos */
+.depoimentos .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+/* Aplica uma transformação à coluna de depoimentos ao passar o mouse */
+.depoimentos .col-3:hover {
+    transform: scale(1.1);
+}
+
+/* Estiliza as imagens dentro da coluna de depoimentos */
+.depoimentos .col-3 img{
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 2px solid var(--cor-padrao);
+}
+
+/* Estiliza os ícones de depoimentos */
+.depoimentos-icons{
+    font-size: 34px;
+    color: var(--cor-padrao);
+}
+
+/* Estiliza os parágrafos dentro da coluna de depoimentos */
+.col-3 p{
+    font-size: 13px;
+    color: var(--cor-fonte-corpo-leve);
+    margin: 12px 0;
+}
+
+/* Estiliza os títulos dentro da coluna de depoimentos */
+.depoimentos .col-3 h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor-fonte-corpo-leve);
+}
+
+/* -------- MARCAS -------- */
+
+.marcas {
+    margin: 100px auto;
+}
+
+.col-5{
+    width: 160px;
+}
+
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+
+/* -------- RODAPE -------- */
+
+.rodape {
+    background: var(--cor-btn-fonte);
+    color: var(--cor-fonte);
+    padding: 60px 0 20px;
+    font-size: 14px;
+}
+
+.rodape p{
+    color: var(--cor-fonte);
+}
+
+.rodape h3{
+    color: var(--cor-fonte);
+    margin-bottom: 20px;
+}
+
+.rodape-col-1, .rodape-col-2, .rodape-col-3, .rodape-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-1{
+    flex-basis: 30%;
+}
+
+.rodape-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.rodape-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-3, .rodape-col-4{
+    flex-basis: 12%;
+    text-align: right;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.rodape hr{
+    border: none;
+    height: 1px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.direitos{
+    text-align: center;
+}
+
+.menu-celular{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/* -------- MENU TABLET  -------- */
+
+ @media only screen and (max-width:800px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: var(--cor-btn-fonte);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: var(--cor-fonte);
+    }
+
+    .menu-celular{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+/* -------- MENU CELULAR até 600 -------- */
+ @media only screen and (max-width:600px){
+
+    .linha{
+        text-align: center;
+    }
+
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+
+    .col-2 h1{
+        font-size: 27px;
+    }
+
+    .rodape-col-3, .rodape-col-4{
+        text-align: center;
+    }
+
+    .rodape-col-4 p{
+        font-size: 24px;
+    }
+
+ }
