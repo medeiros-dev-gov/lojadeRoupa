@@ -378,6 +378,49 @@ ul{
     display: none;
 }
 
+/* -------- LISTAGEM DE PRODUTOS -------- */
+.novo-menu nav ul li a{
+    color: var(--cor-btn-fonte);
+}
+
+.novo-menu {
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.linha2 {
+    margin: 100px auto 50px;
+    justify-content: space-between;
+}
+
+.linha2 select {
+    padding: 5px;
+    border: 1px solid var(--cor-padraoo);
+}
+
+.linha2 select:focus {
+    outline: none;
+}
+
+.paginacao {
+    margin: 0 auto 80px;
+}
+
+.paginacao span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid var(--cor-padrao);
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.paginacao span:hover{
+    background: var(--cor-padrao);
+    color: var(--cor-fonte);
+}
+
 /* -------- MENU TABLET  -------- */
 
  @media only screen and (max-width:800px) {
@@ -406,6 +449,10 @@ ul{
         display: block;
         cursor: pointer;
     }
+
+    .novo-menu nav ul li a{
+        color: var(--cor-fonte);
+    }
 }
 
 
@@ -430,6 +477,10 @@ ul{
 
     .rodape-col-4 p{
         font-size: 24px;
+    }
+
+    .novo-menu nav ul li a{
+        color: var(--cor-fonte);
     }
 
  }
